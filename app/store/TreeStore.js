@@ -5,6 +5,14 @@ Ext.define('Tree.store.TreeStore',{
     
     proxy: {
         type: 'ajax',
-        url: 'data/tree.json'
-    }
+        url: 'data/files.php'
+    },
+    listeners:{
+        _load: function(node, records, successful, eOpts ){
+            console.log('-------------');
+            console.log('Node: ', node);
+            console.log('Records: ', records );
+            console.log('Eopts: ', eOpts );
+        }
+    },
 });
