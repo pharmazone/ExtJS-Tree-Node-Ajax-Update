@@ -17,12 +17,6 @@ Ext.define("Tree.view.Main", {
         dataIndex: 'size',
         sortable: true
     }, {
-        xtype: 'checkcolumn',
-        header: 'Done',
-        dataIndex: 'done',
-        width: 40,
-        stopSelection: false
-    }, {
         text: 'Edit',
         width: 40,
         menuDisabled: true,
@@ -35,10 +29,14 @@ Ext.define("Tree.view.Main", {
             store.getProxy().extraParams.token = 'token';
             var res = store.load({
                 node: record, 
-                callback: function(a,d,f){
+                callback: function(newRecords){
+                    // Clean up Proxy extra Parameters
                     this.getProxy().extraParams = {};
-                    var record2 = a[0];
-                    record.parentNode.replaceChild(record2, record);
+                    // NewRecords is array of new nodes.
+                    // We know that we always have only on new node to update.
+                    var newRecord = newRecords[0];
+                    // raplace old node with updated one
+                    record.parentNode.replaceChild(newRecord, record);
                 }
             });
         },
