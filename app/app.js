@@ -6,7 +6,7 @@ Ext.onReady(function() {
     Ext.require([
         'Ext.data.*',
         'Ext.grid.*',
-        'Ext.tree.*',
+        'Ext.tree.*'
     ]);
 });
 

@@ -4,7 +4,7 @@ Ext.define('Tree.model.TreeModel', {
     fields: [
         { name: 'path', type: 'string' },
         { name: 'name', type: 'string' },
-        { name: 'size', type: 'string' },
+        { name: 'size', type: 'string' }
     ]
 });
 

@@ -3,6 +3,6 @@ Ext.define('Tree.view.Viewport', {
     extend: 'Ext.container.Viewport',
 
     items: [{
-        xtype: 'tree',
+        xtype: 'tree'
     }]
 });
