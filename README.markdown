@@ -19,3 +19,7 @@ server(files.php) and retrive new value of the clicked leaf.
 
 Then in `app/view/Main.js` at line `39` handler replace old node with new one.
 
+## Production Build
+
+At the `build/production` folder You will find production build of this application.
+
